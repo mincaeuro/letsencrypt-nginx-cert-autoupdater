@@ -34,11 +34,13 @@ https://community.letsencrypt.org/t/quick-start-guide/1631
 chmod +x my_cert_script.sh
 ```
 4. setup Crjob (as root)
+
 ```  
 crontab -e
 ```
 5. paste
-	```
+
+```
 1 0 12 2,5,8,11 * /home/<user>/my_cert_script.sh >> /home/<user>/cert.log 2>&1
 ```
 - you've to set it every 3 moths, you can't add in cronjob simply 90 days...in my exaple 12th Feb/May/Aug/Nov
