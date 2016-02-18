@@ -45,3 +45,20 @@ crontab -e
 ```
 - you've to set it every 3 moths, you can't add in cronjob simply 90 days...in my exaple 12th Feb/May/Aug/Nov
 6. save
+7. in nginx settings check the default path for your cert in server settings (if you do this changes, you've to restart nginx)
+ ```
+vim /etc/nginx/sites-available/default
+```
+- example:
+```
+server {
+...
+ssl_certificate /etc/letsencrypt/live/<yourdomain>/fullchain.pem;
+ssl_certificate_key /etc/letsencrypt/live/<yourdomain>/privkey.pem;
+...
+}
+```
+- save and restart nginx:
+```
+sudo service nginx start
+```
