@@ -16,7 +16,9 @@ https://community.letsencrypt.org/t/quick-start-guide/1631
 ```
 - paste:
 ```
-  #! /bin/shecho "stoping Nginx...";
+  #! /bin/sh
+  
+  echo "stoping Nginx...";
   sudo service nginx stop;
   
   cd /home/<user>/letsencrypt/;
